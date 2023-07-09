@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UniPlanner</string>
+    <string name="title_activity_main">UniPlanner</string>
+    <string name="btn_activity_main">Начинать</string>
+    <string name="txt1_activity_main">Делайте свою деятельность</string>
+    <string name="txt2_activity_main">Легко и аккуратно</string>
+    <string name="txt3_activity_main">Готовы добавить продуктивных занятий и прекрасного дня</string>
+    <string name="txt4_activity_main">Поддержите проект \u2B50 на GitHub \u2764</string>
+    <string name="title_bar_activity_login">Назад</string>
+    <string name="title_activity_login">Авторизоваться</string>
+    <string name="title_email_field_activity_login">Электронная почта</string>
+    <string name="hint_txt_email_field_activity_login">пример@domain.rs</string>
+    <string name="title_password_field_activity_login">Пароль</string>
+    <string name="hint_txt_password_field_activity_login">Введите ваш пароль</string>
+    <string name="btn_toAccess_activity_login">Чтобы получить доступ</string>
+    <string name="title_bar_activity_register">Назад</string>
+    <string name="title_activity_register">Зарегистрировать пользователя</string>
+    <string name="title_name_field_activity_register">Имя</string>
+    <string name="hint_txt_name_field_activity_register">Введите ваше имя</string>
+    <string name="title_spinner_gender_activity_register">Пол</string>
+    <string-array name="array_options_spinner_gender">
+        <item>Выберите вариант</item>
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+    <string name="title_email_field_activity_register">Электронная почта</string>
+    <string name="hint_txt_email_field_activity_register">Введите адрес электронной почты</string>
+    <string name="title_password_field_activity_register">Пароль</string>
+    <string name="hint_txt_password_field_activity_register">введите пароль</string>
+    <string name="title_conf_password_field_activity_register">Подтвердите пароль</string>
+    <string name="hint_txt_conf_password_field_activity_register">*******</string>
+    <string name="btn_register_activity_register">регистр</string>
+    <string name="txt_error_name">Пожалуйста, введите Ваше имя</string>
+    <string name="txt_error_gender">Пожалуйста, выберите пол</string>
+    <string name="txt_error_email">Пожалуйста, введите адрес электронной почты</string>
+    <string name="txt_error_password">Пожалуйста, введите пароль</string>
+    <string name="txt_error_conf_password">неверный пароль</string>
+    <string name="toast_user_registered">Успешная регистрация</string>
+    <string name="toast_user_not_exist">ПОЛЬЗОВАТЕЛЬ НЕ СУЩЕСТВУЕТ</string>
+    <string name="toast_welcome_user">Добро пожаловать</string>
+    <string name="menu_1_go_to">Идти к</string>
+    <string name="submenu_0_go_to_main_activity">Main Activity</string>
+    <string name="submenu_1_go_to_start_activity">Start Activity</string>
+    <string name="submenu_2_go_to_login_activity">Login Activity</string>
+    <string name="submenu_3_go_to_register_activity">Register Activity</string>
+    <string name="submenu_4_go_to_webview_activity">WebView Activity</string>
+    <string name="submenu_5_go_to_mynotes_activity">MyNotes Activity</string>
+    <string name="menu_2_settings">Настройки</string>
+    <string name="menu_1_mynotes_profile">Профиль</string>
+    <string name="menu_2_mynotes_settings">Настройки</string>
+    <string name="menu_3_mynotes_logout">Выйти</string>
+    <string name="title_bar_webview">Проект UniPlanner</string>
+    <string name="title_text_info_activity_start">Чтобы дать вам лучший опыт в нашем приложении. Пожалуйста, войдите в свою учетную запись или зарегистрируйтесь. Вы также можете использовать приложение без использования учетной записи.</string>
+    <string name="txt_continue_activity_start">Продолжить без регистрации \u270C</string>
+    <string name="btn_login_activity_start">Авторизоваться</string>
+    <string name="btn_register_activity_start">регистр</string>
+    <string name="title_bar_activity_my_notes">Назад</string>
+    <string name="txt_activity_notes">Мои заметки</string>
+</resources>

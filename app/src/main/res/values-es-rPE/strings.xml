@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UniPlanner</string>
+    <string name="title_activity_main">UniPlanner</string>
+    <string name="btn_activity_main">Comenzar</string>
+    <string name="txt1_activity_main">Haz tus actividades</string>
+    <string name="txt2_activity_main">Fácil y ordenado</string>
+    <string name="txt3_activity_main">Listo para agregar actividades productivas y que tengas un hermoso día</string>
+    <string name="txt4_activity_main">Apoye \u2B50 el proyecto en GitHub \u2764</string>
+    <string name="title_bar_activity_login">Atrás</string>
+    <string name="title_activity_login">Acceso</string>
+    <string name="title_email_field_activity_login">Correo electrónico</string>
+    <string name="hint_txt_email_field_activity_login">ejemplo@gmail.com</string>
+    <string name="title_password_field_activity_login">Contraseña</string>
+    <string name="hint_txt_password_field_activity_login">Ingresa tu contraseña</string>
+    <string name="btn_toAccess_activity_login">Acceder</string>
+    <string name="title_bar_activity_register">Atrás</string>
+    <string name="title_activity_register">Registrar usuario</string>
+    <string name="title_name_field_activity_register">Nombre</string>
+    <string name="hint_txt_name_field_activity_register">Introduzca su nombre</string>
+    <string name="title_spinner_gender_activity_register">Género</string>
+    <string-array name="array_options_spinner_gender">
+        <item>Selecciona una opción</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+    <string name="title_email_field_activity_register">Correo</string>
+    <string name="hint_txt_email_field_activity_register">Introduce tu correo electrónico</string>
+    <string name="title_password_field_activity_register">Contraseña</string>
+    <string name="hint_txt_password_field_activity_register">Ingrese una contraseña</string>
+    <string name="title_conf_password_field_activity_register">Confirmar Contraseña</string>
+    <string name="hint_txt_conf_password_field_activity_register">*******</string>
+    <string name="btn_register_activity_register">Registro</string>
+    <string name="txt_error_name">Por favor escriba su nombre</string>
+    <string name="txt_error_gender">Por favor seleccione un género</string>
+    <string name="txt_error_email">Por favor introduzca su correo electrónico</string>
+    <string name="txt_error_password">Por favor ingrese una contraseña</string>
+    <string name="txt_error_conf_password">Contraseña incorrecta</string>
+    <string name="toast_user_registered">Registro exitoso</string>
+    <string name="toast_user_not_exist">El usuario no existe</string>
+    <string name="toast_welcome_user">Bienvenido de nuevo</string>
+    <string name="menu_1_go_to">Ir a</string>
+    <string name="submenu_0_go_to_main_activity">Main Activity</string>
+    <string name="submenu_1_go_to_start_activity">Start Activity</string>
+    <string name="submenu_2_go_to_login_activity">Login Activity</string>
+    <string name="submenu_3_go_to_register_activity">Register Activity</string>
+    <string name="submenu_4_go_to_webview_activity">WebView Activity</string>
+    <string name="submenu_5_go_to_mynotes_activity">MyNotes Activity</string>
+    <string name="menu_2_settings">Ajustes</string>
+    <string name="menu_1_mynotes_profile">Perfil</string>
+    <string name="menu_2_mynotes_settings">Ajustes</string>
+    <string name="menu_3_mynotes_logout">Cerrar sesión</string>
+    <string name="title_bar_webview">Proyecto UniPlanner</string>
+    <string name="title_text_info_activity_start">Para brindarte una mejor experiencia en nuestra aplicación. Por favor inicie sesión en su cuenta o regístrese. También puede usar la aplicación sin usar una cuenta.</string>
+    <string name="txt_continue_activity_start">Continuar sin registro \u270C</string>
+    <string name="btn_login_activity_start">Acceso</string>
+    <string name="btn_register_activity_start">Registro</string>
+    <string name="title_bar_activity_my_notes">Atrás</string>
+    <string name="txt_activity_notes">Mis notas</string>
+</resources>

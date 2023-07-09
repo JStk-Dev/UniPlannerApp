@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".RegisterActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar_RegisterActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/md_theme_dark_inversePrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/menu_custom_toolbar"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:title="@string/title_bar_activity_register" />
+
+        <TextView
+            android:id="@+id/title_email_field_activity_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_email_field_activity_register"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_gender_field_activity_register" />
+
+        <Button
+            android:id="@+id/btn_register_activity_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="32dp"
+            android:onClick="setRegister"
+            android:text="@string/btn_register_activity_register"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/txt_conf_password_field_activity_register" />
+
+        <TextView
+            android:id="@+id/title_password_field_activity_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_password_field_activity_register"
+            app:layout_constraintStart_toStartOf="@+id/title_email_field_activity_register"
+            app:layout_constraintTop_toBottomOf="@+id/txt_email_field_activity_register" />
+
+        <EditText
+            android:id="@+id/txt_password_field_activity_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:hint="@string/hint_txt_password_field_activity_register"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_name_field_activity_register"
+            app:layout_constraintTop_toBottomOf="@+id/title_password_field_activity_register" />
+
+        <EditText
+            android:id="@+id/txt_email_field_activity_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:hint="@string/hint_txt_email_field_activity_register"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_name_field_activity_register"
+            app:layout_constraintTop_toBottomOf="@+id/title_email_field_activity_register" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="30dp" />
+
+        <TextView
+            android:id="@+id/title_activity_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/title_activity_register"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topAppBar_RegisterActivity" />
+
+        <TextView
+            android:id="@+id/title_conf_password_field_activity_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_conf_password_field_activity_register"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/txt_password_field_activity_register" />
+
+        <EditText
+            android:id="@+id/txt_conf_password_field_activity_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:hint="@string/hint_txt_conf_password_field_activity_register"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txt_name_field_activity_register"
+            app:layout_constraintTop_toBottomOf="@+id/title_conf_password_field_activity_register" />
+
+        <TextView
+            android:id="@+id/title_name_field_activity_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_name_field_activity_register"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/title_activity_register" />
+
+        <EditText
+            android:id="@+id/txt_name_field_activity_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:hint="@string/hint_txt_name_field_activity_register"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/title_name_field_activity_register"
+            app:layout_constraintTop_toBottomOf="@+id/title_name_field_activity_register" />
+
+        <Spinner
+            android:id="@+id/spinner_gender_field_activity_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="40dp"
+            android:contentDescription="@string/title_spinner_gender_activity_register"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txt_name_field_activity_register"
+            app:layout_constraintTop_toBottomOf="@+id/title_spinner_gender_activity_register" />
+
+        <TextView
+            android:id="@+id/title_spinner_gender_activity_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_spinner_gender_activity_register"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name_field_activity_register" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

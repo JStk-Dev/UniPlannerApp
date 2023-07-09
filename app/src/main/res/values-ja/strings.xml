@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UniPlanner</string>
+    <string name="title_activity_main">UniPlanner</string>
+    <string name="btn_activity_main">始める</string>
+    <string name="txt1_activity_main">あなたの活動をしてください</string>
+    <string name="txt2_activity_main">簡単で整頓</string>
+    <string name="txt3_activity_main">生産的なアクティビティを追加して、素晴らしい一日を過ごす準備ができています</string>
+    <string name="txt4_activity_main">GitHub でプロジェクトをサポート \u2B50 \u2764</string>
+    <string name="title_bar_activity_login">戻る</string>
+    <string name="title_activity_login">ログイン</string>
+    <string name="title_email_field_activity_login">Eメール</string>
+    <string name="hint_txt_email_field_activity_login">例@domain.com</string>
+    <string name="title_password_field_activity_login">パスワード</string>
+    <string name="hint_txt_password_field_activity_login">パスワードを入力してください</string>
+    <string name="btn_toAccess_activity_login">アクセスするために</string>
+    <string name="title_bar_activity_register">戻る</string>
+    <string name="title_activity_register">ユーザーを登録する</string>
+    <string name="title_name_field_activity_register">名前</string>
+    <string name="hint_txt_name_field_activity_register">あなたの名前を入力してください</string>
+    <string name="title_spinner_gender_activity_register">性別</string>
+    <string-array name="array_options_spinner_gender">
+        <item>選択肢一つを選択してください</item>
+        <item>男</item>
+        <item>女性</item>
+    </string-array>
+    <string name="title_email_field_activity_register">Eメール</string>
+    <string name="hint_txt_email_field_activity_register">メールアドレスを入力</string>
+    <string name="title_password_field_activity_register">パスワード</string>
+    <string name="hint_txt_password_field_activity_register">パスワードを入力します</string>
+    <string name="title_conf_password_field_activity_register">パスワードを認証する</string>
+    <string name="hint_txt_conf_password_field_activity_register">*******</string>
+    <string name="btn_register_activity_register">登録</string>
+    <string name="txt_error_name">あなたの名前を入力してください</string>
+    <string name="txt_error_gender">性別を選択してください</string>
+    <string name="txt_error_email">あなたのメールアドレスを入力してください</string>
+    <string name="txt_error_password">パスワードを入力してください</string>
+    <string name="txt_error_conf_password">パスワードが間違っています</string>
+    <string name="toast_user_registered">登録成功</string>
+    <string name="toast_user_not_exist">ユーザーは存在しません</string>
+    <string name="toast_welcome_user">おかえり</string>
+    <string name="menu_1_go_to">に行く</string>
+    <string name="submenu_0_go_to_main_activity">Main Activity</string>
+    <string name="submenu_1_go_to_start_activity">Start Activity</string>
+    <string name="submenu_2_go_to_login_activity">Login Activity</string>
+    <string name="submenu_3_go_to_register_activity">Register Activity</string>
+    <string name="submenu_4_go_to_webview_activity">WebView Activity</string>
+    <string name="submenu_5_go_to_mynotes_activity">MyNotes Activity</string>
+    <string name="menu_2_settings">設定</string>
+    <string name="menu_1_mynotes_profile">プロフィール</string>
+    <string name="menu_2_mynotes_settings">設定</string>
+    <string name="menu_3_mynotes_logout">ログアウト</string>
+    <string name="title_bar_webview">計画 UniPlanner</string>
+    <string name="title_text_info_activity_start">当社のアプリケーションでより良いエクスペリエンスを提供するため。 アカウントにログインするか、登録してください。 アカウントを使用せずにアプリを使用することもできます。</string>
+    <string name="txt_continue_activity_start">登録せずに続行 \u270C</string>
+    <string name="btn_login_activity_start">ログイン</string>
+    <string name="btn_register_activity_start">登録</string>
+    <string name="title_bar_activity_my_notes">戻る</string>
+    <string name="txt_activity_notes">私のノート</string>
+</resources>

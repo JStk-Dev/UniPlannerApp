@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "185840178106",
+    "project_id": "uniplanner-40920",
+    "storage_bucket": "uniplanner-40920.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185840178106:android:119e1f4382a50a062bc383",
+        "android_client_info": {
+          "package_name": "com.utp.proyecto_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185840178106-807bl69t6fi8qlusrb76lj9u353db3lc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo-kbSlbRYeQk0jALQZlBYFGxeRebd9FI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185840178106-807bl69t6fi8qlusrb76lj9u353db3lc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

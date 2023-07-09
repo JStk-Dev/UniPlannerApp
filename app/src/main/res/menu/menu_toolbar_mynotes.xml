@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_menu_mynotes_profile"
+        android:title="@string/menu_1_mynotes_profile"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_menu_mynotes_settings"
+        android:title="@string/menu_2_mynotes_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_menu_mynotes_logout"
+        android:title="@string/menu_3_mynotes_logout"
+        app:showAsAction="never"/>
+</menu>

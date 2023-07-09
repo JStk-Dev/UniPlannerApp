@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_menu_go_to"
+        android:title="@string/menu_1_go_to"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/action_submenu_0_go_to_main_activity"
+                android:title="@string/submenu_0_go_to_main_activity" />
+            <item
+                android:id="@+id/action_submenu_1_go_to_start_activity"
+                android:title="@string/submenu_1_go_to_start_activity" />
+            <item
+                android:id="@+id/action_submenu_2_go_to_login_activity"
+                android:title="@string/submenu_2_go_to_login_activity" />
+            <item
+                android:id="@+id/action_submenu_3_go_to_register_activity"
+                android:title="@string/submenu_3_go_to_register_activity"/>
+            <item
+                android:id="@+id/action_submenu_4_go_to_webview_activity"
+                android:title="@string/submenu_4_go_to_webview_activity"/>
+            <item
+                android:id="@+id/action_submenu_5_go_to_mynotes_activity"
+                android:title="@string/submenu_5_go_to_mynotes_activity"/>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_menu_settings"
+        android:title="@string/menu_2_settings"
+        app:showAsAction="never" />
+</menu>
