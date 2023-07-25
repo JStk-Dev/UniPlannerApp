@@ -28,7 +28,7 @@
         </menu>
     </item>
     <item
-        android:id="@+id/action_menu_settings"
-        android:title="@string/menu_2_settings"
+        android:id="@+id/action_menu_about"
+        android:title="@string/menu_2_about"
         app:showAsAction="never" />
 </menu>

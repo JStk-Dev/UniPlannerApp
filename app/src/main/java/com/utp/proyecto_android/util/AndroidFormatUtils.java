@@ -1,9 +1,8 @@
 package com.utp.proyecto_android.util;
 
-/*
-  @author JS
- */
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -24,7 +23,7 @@ import com.utp.proyecto_android.MyNotesActivity;
 import com.utp.proyecto_android.ProfileActivity;
 import com.utp.proyecto_android.R;
 import com.utp.proyecto_android.RegisterActivity;
-import com.utp.proyecto_android.SettingsActivity;
+import com.utp.proyecto_android.AboutActivity;
 import com.utp.proyecto_android.StartActivity;
 import com.utp.proyecto_android.WebViewActivity;
 
@@ -55,7 +54,6 @@ public class AndroidFormatUtils {
         SpannableString texto = new SpannableString(txt);
         texto.setSpan(new UnderlineSpan(),0,texto.length(),0);
 
-        // Establecer el texto en el TextView
         textview.setText(texto);
     }
 
@@ -116,31 +114,53 @@ public class AndroidFormatUtils {
             // Ir a mynotes_activity
             activity.startActivity(new Intent(activity, MyNotesActivity.class));
             return true;
-        } else if (itemId == R.id.action_menu_settings) {
-            // Ir a activity_settings
-            activity.startActivity(new Intent(activity, SettingsActivity.class));
+        } else if (itemId == R.id.action_menu_about) {
+            // Ir a activity_about
+            activity.startActivity(new Intent(activity, AboutActivity.class));
             return true;
         }
 
         return false;
     }
 
+    /**
+     * Asigna las acciones del menu del activity "MyNotes"
+     */
     public boolean setActionsMenuMyNotes(@NonNull AppCompatActivity activity, int itemId) {
         if (itemId == R.id.action_menu_mynotes_profile) {
-            // Ir a activity_profile
+            // Ir a activity profile
             activity.startActivity(new Intent(activity, ProfileActivity.class));
+            SharedPreferences preferences = activity.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
+            String userID = preferences.getString("USER_ID", null);
+            if (userID == null) {
+                // Si el usuario no ha iniciado sesión
+                activity.finish();
+            }
             return true;
-        } else if (itemId == R.id.action_menu_mynotes_settings) {
+
+        } else if (itemId == R.id.action_menu_mynotes_about) {
             // Ir a activity_settings
-            activity.startActivity(new Intent(activity, SettingsActivity.class));
+            activity.startActivity(new Intent(activity, AboutActivity.class));
             return true;
+
         } else if (itemId == R.id.action_menu_mynotes_logout) {
-            // logout - redirige al start_activity
-            //activity.startActivity(new Intent(activity, StartActivity.class));
+            // Cerrar sesión - redirige al main_activity
             FirebaseAuth.getInstance().signOut();
-            Toast.makeText(activity, "Sesión Cerrada", Toast.LENGTH_SHORT).show();
-            activity.startActivity(new Intent(activity, StartActivity.class));
+            SharedPreferences preferences =
+                    activity.getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.clear();
+            editor.apply();
+
+            SharedPreferences pref = activity.getSharedPreferences("NOTE_DATA", Context.MODE_PRIVATE);
+            SharedPreferences.Editor edit = pref.edit();
+            edit.clear();
+            edit.apply();
+            activity.startActivity(new Intent(activity, MainActivity.class));
+            Toast.makeText(activity, "Se cerró su sesión de usuario", Toast.LENGTH_SHORT).show();
+            activity.finish();
             return true;
+
         }
         return false;
     }

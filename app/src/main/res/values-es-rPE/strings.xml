@@ -46,9 +46,9 @@
     <string name="submenu_3_go_to_register_activity">Register Activity</string>
     <string name="submenu_4_go_to_webview_activity">WebView Activity</string>
     <string name="submenu_5_go_to_mynotes_activity">MyNotes Activity</string>
-    <string name="menu_2_settings">Ajustes</string>
+    <string name="menu_2_about">Acerca de</string>
     <string name="menu_1_mynotes_profile">Perfil</string>
-    <string name="menu_2_mynotes_settings">Ajustes</string>
+    <string name="menu_2_mynotes_about">Acerca de</string>
     <string name="menu_3_mynotes_logout">Cerrar sesión</string>
     <string name="title_bar_webview">Proyecto UniPlanner</string>
     <string name="title_text_info_activity_start">Para brindarte una mejor experiencia en nuestra aplicación. Por favor inicie sesión en su cuenta o regístrese. También puede usar la aplicación sin usar una cuenta.</string>
@@ -57,4 +57,19 @@
     <string name="btn_register_activity_start">Registro</string>
     <string name="title_bar_activity_my_notes">Atrás</string>
     <string name="txt_activity_notes">Mis notas</string>
+    <string name="speakable_text_floating_button_add_note">Agrega una nota</string>
+    <string name="btn_cancel_activity_note">Cancelar</string>
+    <string name="btn_save_activity_note">Guardar</string>
+    <string name="hint_txt_note_title">Agrega un título</string>
+    <string name="hint_txt_note_description">Agrega un contenido para la nota …</string>
+    <string name="txt_error_title_note">Introduce un título para la nota</string>
+    <string name="txt_error_content_note">Por favor ingrese un contenido para la nota</string>
+    <string name="title_activity_profile">Mi información personal</string>
+    <string name="title_nickname_field_activity_profile">Apodo</string>
+    <string name="title_name_field_activity_profile">Nombre</string>
+    <string name="title_email_field_activity_profile">Correo</string>
+    <string name="title_password_field_activity_profile">Contraseña</string>
+    <string name="btn_edit_activity_profile">Editar Perfil</string>
+    <string name="title_gender_activity_profile">Genero</string>
+    <string name="btn_save_activity_profile">Guardar</string>
 </resources>

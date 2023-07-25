@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,162 +15,108 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.utp.proyecto_android.util.AndroidFormatUtils;
-import com.utp.proyecto_android.util.UserManager;
 
 public class LoginActivity extends AppCompatActivity {
 
-    // Instancia de la clase de utilidad para aplicar formato
     private AndroidFormatUtils util;
 
-    private EditText txt_email, txt_password;
-
-    private String email, password;
-
-    // Instancia de la clase custom UserManager del paquete util
-    private UserManager userManager;
-
-
-    // Variables para autenticacion con Firebase
     private FirebaseAuth auth;
     private EditText txtClaveLogin, txtCorreoLogin;
-    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        userManager = UserManager.getInstance();
-
-        // Se obtienen los recursos de la vista - Gestiòn local de usuarios
-        txt_email = findViewById(R.id.txt_email_field_login_activity);
-        txt_password = findViewById(R.id.txt_password_field_login_activity);
-
         util = new AndroidFormatUtils(getResources());
         util.setCustomToolBar(this, findViewById(R.id.topAppBar_LoginActivity));
 
-
-        // Implementaciòn Firebase - Autenticaciòn de usuarios
-        auth = FirebaseAuth.getInstance();
-        // inicio
-        SharedPreferences preferences =
-                getApplication().getSharedPreferences("DATA", Context.MODE_PRIVATE);
-        editor = preferences.edit();
         txtClaveLogin = findViewById(R.id.txt_password_field_login_activity);
         txtCorreoLogin = findViewById(R.id.txt_email_field_login_activity);
 
+        validarSesionActiva();
     }
 
+    private void validarSesionActiva() {
+        // Implementaciòn Firebase - Autenticaciòn de usuarios
+        auth = FirebaseAuth.getInstance();
+        SharedPreferences preferences = getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
+        String userID = preferences.getString("USER_ID", null);
 
+        if (auth.getCurrentUser() != null  && userID != null) {
+            // Si el ID está en SharedPreferences, significa que el usuario ha iniciado sesión previamente.
+            // Redirige automáticamente a la actividad MyNotesActivity
+            startActivity(new Intent(LoginActivity.this, MyNotesActivity.class));
+            finish();
+        }
+    }
 
-
+    /**
+     * Metodo del botón "Iniciar Sesión"
+     */
     public void iniciar(View view) {
-        String correo =txtCorreoLogin.getText().toString().trim();
-        String clave =txtClaveLogin.getText().toString().trim();
-        if (TextUtils.isEmpty(correo)){
-            txtCorreoLogin.setError("Ingresar correo");
-            return;
+        // Valida campos vacios del formulario
+        if (!validateFields()) {
+            String correo = txtCorreoLogin.getText().toString().trim();
+            String clave = txtClaveLogin.getText().toString().trim();
+            accederFirebase(correo,clave);
         }
-        if (TextUtils.isEmpty(clave)){
-            txtClaveLogin.setError("Ingresar clave");
-            return;
-        }
-        txtClaveLogin.setText(null);
-       // StartActivity obj = new StartActivity();
-        acceder(correo,clave);
     }
 
-    private void acceder(String email, String password) {
+    private void accederFirebase(String email, String password) {
 
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            auth = FirebaseAuth.getInstance();
+                            // Inicio de sesión exitoso
                             FirebaseUser user = auth.getCurrentUser();
-                            editor.putString("CORREO", user.getEmail());
-                            editor.apply();
-                            Toast.makeText(LoginActivity.this, "Autenticaciòn Exitosa!", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginActivity.this, MyNotesActivity.class));
-                            //updateUI(user);
+                            if (user != null) {
+                                // Guardar el ID del usuario en SharedPreferences
+                                SharedPreferences preferences = getSharedPreferences("USER_DATA", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                String userID = user.getUid();
+                                editor.putString("USER_ID", userID);
+                                editor.apply();
+
+                                Toast.makeText(LoginActivity.this, getString(R.string.toast_welcome_user), Toast.LENGTH_SHORT).show();
+                                // Redirige al usuario al MyNotesActivity
+                                startActivity(new Intent(LoginActivity.this, MyNotesActivity.class));
+                                // Finaliza la activity actual (LoginActivity)
+                                finish();
+                            }
+
                         } else {
-                            Toast.makeText(LoginActivity.this, "Autenticaciòn Fallida!", Toast.LENGTH_SHORT).show();
-                            txtClaveLogin.setText(null);
-                            //updateUI(null);
+                            // Credenciales incorrectas - Usuario no existe
+                            Toast.makeText(LoginActivity.this, getString(R.string.toast_user_not_exist), Toast.LENGTH_SHORT).show();
+                            clearText(); // Limpia las entradas de texto
                         }
                     }
                 });
-    }
-
-
-    private void crearCuenta(String email, String password) {
-        auth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            FirebaseUser user = auth.getCurrentUser();
-                            //updateUI(user);
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
-                        }
-                    }
-                });
-    }
-
-
-
-
-
-
-
-    /*
-        Implementaciòn de autenticaciòn local de usuarios
-     */
-
-    public void setLogin(View view) {
-        // Valida campos del formulario
-        if(!validateFields()) {
-            // Verificar las credenciales utilizando UserManager
-            // Valida que el usuario ingresado este registrado
-            if (userManager.isValidCredentials(email, password)) {
-                Toast.makeText(this, getString(R.string.toast_welcome_user), Toast.LENGTH_SHORT).show();
-                // Redirige al usuario al MyNotesActivity
-                startActivity(new Intent(this, MyNotesActivity.class));
-                // Finaliza la activity actual (LoginActivity)
-                finish();
-            } else {
-                // Credenciales incorrectas - Usuario no existe
-                Toast.makeText(this, getString(R.string.toast_user_not_exist), Toast.LENGTH_SHORT).show();
-                clearText(); // Limpia las entradas de texto
-            }
-        }
     }
 
     private void clearText() {
-        txt_email.setText("");
-        txt_password.setText("");
+        txtCorreoLogin.setText("");
+        txtClaveLogin.setText("");
     }
 
     private boolean validateFields() {
-        email = txt_email.getText().toString();
-        password = txt_password.getText().toString();
+        String email = txtCorreoLogin.getText().toString();
+        String password = txtClaveLogin.getText().toString();
 
         if (email.isEmpty()) {
-            txt_email.setError(getString(R.string.txt_error_email));
+            txtCorreoLogin.setError(getString(R.string.txt_error_email));
             return true;
         } else if (password.isEmpty()) {
-            txt_password.setError(getString(R.string.txt_error_password));
+            txtClaveLogin.setError(getString(R.string.txt_error_password));
             return true;
         }
-
         // Si esta todo bien
         return false;
     }

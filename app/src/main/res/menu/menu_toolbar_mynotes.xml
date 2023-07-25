@@ -6,8 +6,8 @@
         android:title="@string/menu_1_mynotes_profile"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/action_menu_mynotes_settings"
-        android:title="@string/menu_2_mynotes_settings"
+        android:id="@+id/action_menu_mynotes_about"
+        android:title="@string/menu_2_mynotes_about"
         app:showAsAction="never" />
 
     <item

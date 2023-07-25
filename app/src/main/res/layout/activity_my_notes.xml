@@ -19,7 +19,7 @@
         app:title="@string/title_bar_activity_my_notes"/>
 
     <TextView
-        android:id="@+id/title_mynotes_activity"
+        android:id="@+id/title_activity_myNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -31,14 +31,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topAppBar_MyNotesActivity" />
 
-    <ListView
-        android:id="@+id/list_notes"
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_mynotes_activity" />
+        app:layout_constraintTop_toBottomOf="@+id/title_activity_myNotes"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ListView
+            android:id="@+id/listView_activity_myNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:dividerHeight="1dp"
+            tools:ignore="NestedScrolling" />
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_note_activity_myNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:contentDescription="@string/speakable_text_floating_button_add_note"
+        android:focusable="true"
+        android:minWidth="48dp"
+        android:minHeight="32dp"
+        android:onClick="addNewItem"
+        app:backgroundTint="@color/md_theme_dark_errorContainer"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:maxImageSize="35dp"
+        app:rippleColor="@color/md_theme_dark_inversePrimary"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@color/md_theme_dark_background"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

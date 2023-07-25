@@ -14,7 +14,10 @@
         android:theme="@style/Theme.Proyecto_Android"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".NoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutActivity"
             android:exported="false" />
         <activity
             android:name=".ProfileActivity"

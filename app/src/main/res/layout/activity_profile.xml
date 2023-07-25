@@ -6,4 +6,158 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background_main" />
+
+    <Button
+        android:id="@+id/btn_save_activity_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="saveDataProfile"
+        android:text="@string/btn_save_activity_profile"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_gender_field_activity_profile"
+        app:layout_constraintVertical_bias="0.511" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_activity_profile"
+        android:textColor="@color/md_theme_dark_inverseSurface"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="310dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/imagen_2023_07_09_183403195_removebg_preview" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_name_field_activity_profile"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/txt_name_field_activity_profile"
+        android:layout_width="269dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="@string/hint_txt_name_field_activity_register"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#8C8C8C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_email_field_activity_profile"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_field_activity_profile" />
+
+    <EditText
+        android:id="@+id/txt_email_field_activity_profile"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="@string/hint_txt_email_field_activity_register"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textColorHint="#8C8C8C"
+        app:layout_constraintEnd_toEndOf="@+id/txt_name_field_activity_profile"
+        app:layout_constraintStart_toStartOf="@+id/txt_name_field_activity_profile"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/title_gender_activity_profile"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_email_field_activity_profile" />
+
+    <EditText
+        android:id="@+id/txt_gender_field_activity_profile"
+        android:layout_width="272dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Enter a value"
+        android:inputType="textEmailAddress"
+        android:textColor="#000000"
+        android:textColorHint="#8C8C8C"
+        app:layout_constraintEnd_toEndOf="@+id/txt_email_field_activity_profile"
+        app:layout_constraintStart_toStartOf="@+id/txt_email_field_activity_profile"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/btn_edit_data_activity_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="enableEditText"
+        android:text="@string/btn_edit_activity_profile"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_gender_field_activity_profile"
+        app:layout_constraintVertical_bias="0.511" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

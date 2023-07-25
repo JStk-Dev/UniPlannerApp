@@ -46,9 +46,9 @@
     <string name="submenu_3_go_to_register_activity">Register Activity</string>
     <string name="submenu_4_go_to_webview_activity">WebView Activity</string>
     <string name="submenu_5_go_to_mynotes_activity">MyNotes Activity</string>
-    <string name="menu_2_settings">Настройки</string>
+    <string name="menu_2_about">Настройки</string>
     <string name="menu_1_mynotes_profile">Профиль</string>
-    <string name="menu_2_mynotes_settings">Настройки</string>
+    <string name="menu_2_mynotes_about">Настройки</string>
     <string name="menu_3_mynotes_logout">Выйти</string>
     <string name="title_bar_webview">Проект UniPlanner</string>
     <string name="title_text_info_activity_start">Чтобы дать вам лучший опыт в нашем приложении. Пожалуйста, войдите в свою учетную запись или зарегистрируйтесь. Вы также можете использовать приложение без использования учетной записи.</string>
@@ -57,4 +57,19 @@
     <string name="btn_register_activity_start">регистр</string>
     <string name="title_bar_activity_my_notes">Назад</string>
     <string name="txt_activity_notes">Мои заметки</string>
+    <string name="speakable_text_floating_button_add_note">добавить заметку</string>
+    <string name="btn_cancel_activity_note">отмена</string>
+    <string name="btn_save_activity_note">сохранять</string>
+    <string name="hint_txt_note_title">добавить заголовок</string>
+    <string name="hint_txt_note_description">добавить содержимое для заметки</string>
+    <string name="txt_error_title_note">Пожалуйста, введите название заметки</string>
+    <string name="txt_error_content_note">Пожалуйста, введите содержание заметки</string>
+    <string name="title_activity_profile">Моя личная информация</string>
+    <string name="title_nickname_field_activity_profile">Псевдоним</string>
+    <string name="title_name_field_activity_profile">Имя</string>
+    <string name="title_email_field_activity_profile">Электронная почта</string>
+    <string name="title_password_field_activity_profile">Пароль</string>
+    <string name="btn_edit_activity_profile">Редактировать профиль</string>
+    <string name="title_gender_activity_profile">Пол</string>
+    <string name="btn_save_activity_profile">сохранять</string>
 </resources>

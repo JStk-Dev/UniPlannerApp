@@ -46,9 +46,9 @@
     <string name="submenu_3_go_to_register_activity">Register Activity</string>
     <string name="submenu_4_go_to_webview_activity">WebView Activity</string>
     <string name="submenu_5_go_to_mynotes_activity">MyNotes Activity</string>
-    <string name="menu_2_settings">설정</string>
+    <string name="menu_2_about">설정</string>
     <string name="menu_1_mynotes_profile">프로필</string>
-    <string name="menu_2_mynotes_settings">설정</string>
+    <string name="menu_2_mynotes_about">설정</string>
     <string name="menu_3_mynotes_logout">로그 아웃</string>
     <string name="title_bar_webview">프로젝트 UniPlanner</string>
     <string name="title_text_info_activity_start">우리 응용 프로그램에서 더 나은 경험을 제공합니다. 귀하의 계정에 로그인하거나 등록하십시오. 계정을 사용하지 않고도 앱을 사용할 수 있습니다.</string>
@@ -57,4 +57,19 @@
     <string name="btn_register_activity_start">등록하다</string>
     <string name="title_bar_activity_my_notes">뒤쪽에</string>
     <string name="txt_activity_notes">내 노트</string>
+    <string name="speakable_text_floating_button_add_note">메모 추가</string>
+    <string name="btn_cancel_activity_note">취소</string>
+    <string name="btn_save_activity_note">구하다</string>
+    <string name="hint_txt_note_title">제목 추가</string>
+    <string name="hint_txt_note_description">메모에 내용 추가</string>
+    <string name="txt_error_title_note">메모의 제목을 입력하세요.</string>
+    <string name="txt_error_content_note">메모 내용을 입력하세요.</string>
+    <string name="title_activity_profile">내 개인 정보</string>
+    <string name="title_nickname_field_activity_profile">별명</string>
+    <string name="title_name_field_activity_profile">이름</string>
+    <string name="title_email_field_activity_profile">이메일</string>
+    <string name="title_password_field_activity_profile">비밀번호</string>
+    <string name="btn_edit_activity_profile">프로필 수정</string>
+    <string name="title_gender_activity_profile">성별</string>
+    <string name="btn_save_activity_profile">구하다</string>
 </resources>
