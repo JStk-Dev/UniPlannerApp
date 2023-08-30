@@ -5,8 +5,8 @@
 # Screenshots
 | *Main Activity* | *Start Activity* |
 | --- | --- |
-| <img src="https://i.ibb.co/9p0DQVN/app-uniplanner-1.jpg" alt="IMG Main Activity" width="200" position="center"> | <img src="https://i.ibb.co/JcS5Z8x/app-uniplanner-2.jpg" alt="IMG Start Activity" width="206.5"> |
-| Pantalla principal a mostrar<br> al iniciar la aplicación. | Pantalla de acceso/registro<br> de usuarios |
+| <img src="https://i.ibb.co/9p0DQVN/app-uniplanner-1.jpg" alt="IMG Main Activity" max-width="100%" display="flex" margin="0 auto" height="400"> | <img src="https://i.ibb.co/JcS5Z8x/app-uniplanner-2.jpg" alt="IMG Start Activity" max-width="100%" display="flex" margin="0 auto" height="400"> |
+| <p display="flex" justify-content="center">Pantalla principal a mostrar al<br> iniciar la aplicación.</p> | <p display="flex" justify-content="center">Pantalla de acceso/registro<br> de usuarios.</p> |
 
 # Firebase Configuration (EN)
 In the package <code>app/</code> replace file <code>google-services.json</code> with your <code>.json</code> file (proporcioned Google) of the control panel of your firebase account. This way for has total administration of your users (registerd or logined) in the app.
